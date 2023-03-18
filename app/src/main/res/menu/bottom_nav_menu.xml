@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/dashboard"
+        />
+    <item
+        android:id="@+id/taskFragment"
+        android:icon="@drawable/ic_baseline_calendar_month_24"
+        android:title="@string/task"
+       />
+
+    <item
+        android:id="@+id/placeholder"
+        android:title=""/>
+
+    <item
+        android:id="@+id/notesFragment"
+        android:icon="@drawable/ic_baseline_file_copy_24"
+        android:title="@string/notes"
+       />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="@string/profile"
+        />
+</menu>

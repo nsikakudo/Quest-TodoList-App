@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardRv"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp"
+    android:layout_margin="15dp"
+    android:backgroundTint="@color/btn_color">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/office_project"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_work_24"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/groceries"
+        android:textColor="@color/black"/>
+
+    <ProgressBar
+        android:id="@+id/taskRv"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="150dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="15dp"
+        android:indeterminateOnly="false"
+        android:indeterminateTint="@color/white"
+        android:progressDrawable="@drawable/progressbar_rec"
+        android:layout_marginTop="15dp"
+        />
+    </LinearLayout>
+
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>

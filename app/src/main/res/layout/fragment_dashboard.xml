@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingTop="20dp"
+    android:background="@drawable/let_s_start__1_"
+    tools:context=".DashboardFragment">
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+
+
+ <ImageView
+     android:id="@+id/imageView"
+     android:layout_width="80dp"
+     android:layout_height="80dp"
+     android:layout_marginStart="20dp"
+     android:contentDescription="@string/inProgress"
+     android:background="@drawable/profile_picture"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
+
+
+ <TextView
+     android:id="@+id/textView"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="20dp"
+     android:layout_marginTop="10dp"
+     android:layout_marginEnd="20dp"
+     android:text="@string/hello"
+     android:textColor="@color/blue"
+     android:textSize="15sp"
+     android:textStyle="bold"
+     app:layout_constraintEnd_toStartOf="@+id/imageButton"
+     app:layout_constraintHorizontal_bias="0.0"
+     app:layout_constraintStart_toEndOf="@+id/imageView"
+     app:layout_constraintTop_toTopOf="parent" />
+
+ <TextView
+     android:id="@+id/textView2"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="20dp"
+     android:text="@string/username"
+     android:textColor="@color/blue"
+     android:textSize="20sp"
+     android:textStyle="bold"
+     app:layout_constraintEnd_toStartOf="@+id/imageButton"
+     app:layout_constraintHorizontal_bias="0.0"
+     app:layout_constraintStart_toEndOf="@+id/imageView"
+     app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+ <ImageButton
+     android:id="@+id/imageButton"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="20dp"
+     android:layout_marginEnd="20dp"
+     android:background="@color/bg2"
+     android:contentDescription="@string/inProgress"
+     android:src="@drawable/btn_notification"
+     app:layout_constraintEnd_toEndOf="parent"
+     tools:ignore="MissingConstraints"
+     tools:layout_editor_absoluteY="36dp" />
+
+ <androidx.cardview.widget.CardView
+     android:id="@+id/cardView"
+     android:layout_width="match_parent"
+     android:layout_height="150dp"
+     android:layout_marginTop="40dp"
+     android:layout_marginStart="20dp"
+     android:layout_marginEnd="20dp"
+     android:backgroundTint="@color/edt_color1"
+     app:cardCornerRadius="20dp"
+     app:cardElevation="5dp"
+     app:cardMaxElevation="20dp"
+     app:layout_constraintTop_toBottomOf="@+id/textView2"
+     tools:ignore="MissingConstraints"
+     tools:layout_editor_absoluteX="0dp">
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center">
+
+   <ProgressBar
+       android:id="@+id/progress_bar"
+       android:layout_width="100dp"
+       android:layout_height="100dp"
+       android:layout_marginStart="200dp"
+       android:layout_marginTop="10dp"
+       android:indeterminateOnly="false"
+       android:progressDrawable="@drawable/progress_circle"
+       tools:progress="40" />
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+       android:gravity="center"
+       android:paddingStart="205dp"
+       android:text="@string/_40"
+       android:textColor="@color/white"
+       android:textSize="20sp"
+       android:textStyle="bold"
+       tools:ignore="RtlSymmetry" />
+
+
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:paddingTop="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/today_task"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:text="@string/almost_done"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/btn_color"
+        android:elevation="3dp"
+        android:text="@string/view_task"
+        android:textAllCaps="false"
+        android:textColor="@color/edt_color1"
+        android:textStyle="bold" />
+   </LinearLayout>
+
+  </RelativeLayout>
+ </androidx.cardview.widget.CardView>
+
+  <LinearLayout
+      android:id="@+id/layout_horizontalRv"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginEnd="20dp"
+      android:orientation="vertical"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/cardView"
+      tools:ignore="MissingConstraints">
+
+
+  <TextView
+      android:id="@+id/textView3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="30dp"
+      android:text="@string/inProgress"
+      android:textColor="@color/blue"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      />
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/horizontalRv"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="12dp"
+       android:scrollbars="horizontal"
+       tools:ignore="MissingConstraints"
+       tools:rv_items="cardRv" />
+
+  </LinearLayout>
+
+
+  <LinearLayout
+      android:id="@+id/layout_verticalRv"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:layout_marginEnd="20dp"
+      android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_horizontalRv">
+
+   <TextView
+       android:id="@+id/textView4"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="24dp"
+       android:text="@string/task_groups"
+       android:textColor="@color/blue"
+       android:textSize="20sp"
+       android:textStyle="bold"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.0"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/layout_horizontalRv" />
+
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/horizontalRv2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:scrollbars="vertical"
+      tools:ignore="MissingConstraints"
+      tools:rv_items="cardRv" />
+
+  </LinearLayout>
+
+
+ </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
